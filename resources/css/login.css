@@ -1,0 +1,260 @@
+/* =========================
+   LOGIN
+========================= */
+
+.login-page {
+    min-height: 100vh;
+
+    background-color: var(--color-background);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-large);
+
+    padding: 42px;
+
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* =========================
+   LOGIN HEADER
+========================= */
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-logo {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    margin-bottom: 16px;
+}
+
+.login-header h1 {
+    color: var(--color-primary-dark);
+
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: var(--color-text-soft);
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.login-field label {
+    color: var(--color-text);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-field input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-small);
+
+    background-color: var(--color-surface);
+
+    color: var(--color-text);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-field input::placeholder {
+    color: #9aa6a3;
+}
+
+.login-field input:focus {
+    border-color: var(--color-secondary);
+
+    box-shadow: 0 0 0 3px rgba(62, 124, 120, 0.12);
+}
+
+
+/* =========================
+   LOGIN OPTIONS
+========================= */
+
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    font-size: 13px;
+}
+
+.login-remember {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--color-text-soft);
+
+    cursor: pointer;
+}
+
+.login-remember input {
+    accent-color: var(--color-primary);
+}
+
+.login-forgot {
+    color: var(--color-secondary);
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.login-forgot:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: var(--radius-small);
+
+    background-color: var(--color-primary);
+
+    color: var(--color-surface);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: var(--color-primary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   LOGIN FOOTER
+========================= */
+
+.login-footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.login-footer a {
+    color: var(--color-secondary);
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LOGIN RESPONSIVE
+========================= */
+
+@media (max-width: 500px) {
+
+    .login-page {
+        padding: 20px 15px;
+    }
+
+    .login-card {
+        padding: 30px 24px;
+    }
+
+    .login-options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .login-forgot {
+        white-space: normal;
+    }
+}
