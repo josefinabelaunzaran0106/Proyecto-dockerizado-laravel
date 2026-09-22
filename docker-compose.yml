@@ -43,10 +43,28 @@ services:
       - laravel
 
 
+  vite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: mi-proyecto-vite
+
+    command: npm run dev -- --host 0.0.0.0
+
+    ports:
+      - "5173:5173"
+
+    volumes:
+      - .:/var/www/html
+
+    networks:
+      - laravel
+
+
 volumes:
   mysql_data:
 
 
 networks:
   laravel:
-
