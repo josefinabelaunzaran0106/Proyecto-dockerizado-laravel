@@ -1,0 +1,52 @@
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: mi-proyecto-app
+
+    ports:
+      - "8000:80"
+
+    volumes:
+      - .:/var/www/html
+
+    depends_on:
+      - mysql
+
+    networks:
+      - laravel
+
+
+  mysql:
+    image: mysql:8.0
+
+    container_name: mi-proyecto-mysql
+
+    restart: unless-stopped
+
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel
+      MYSQL_ROOT_PASSWORD: root
+
+    ports:
+      - "3307:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    networks:
+      - laravel
+
+
+volumes:
+  mysql_data:
+
+
+networks:
+  laravel:
+
